@@ -1,0 +1,25 @@
+{
+  "name": "rxjs-patterns",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flec/rxjs-patterns.git"
+  },
+  "keywords": [
+    "rxjs"
+  ],
+  "author": "flec",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/flec/rxjs-patterns/issues"
+  },
+  "homepage": "https://github.com/flec/rxjs-patterns#readme",
+  "dependencies": {
+    "rxjs": "^7.5.5"
+  }
+}
