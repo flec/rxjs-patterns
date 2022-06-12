@@ -1,12 +1,12 @@
-const { join } = require("path");
+const { join } = require('path');
 
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2019,
-    project: join(__dirname, "./tsconfig.json"),
-    sourceType: "module"
+    project: join(__dirname, './tsconfig.json'),
+    sourceType: 'module',
   },
   plugins: [
     '@typescript-eslint',
@@ -21,5 +21,6 @@ module.exports = {
   rules: {
     semi: ["error", "always"],
     quotes: ["error", "single"],
+    'eol-last': ["error", "always"],
   }
 };
