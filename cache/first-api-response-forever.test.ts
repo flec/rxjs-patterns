@@ -1,14 +1,19 @@
 import { shareReplay } from 'rxjs';
+
 import { api } from '../testing/api';
 
-test('caches the first api response forever', () => {
+describe('cache the first value', () => {
 
-  const api$ = api(['-a-|', '-b-|']);
+  test('caches the first api response forever', () => {
 
-  const cache$ = api$.pipe(
-    shareReplay({ bufferSize: 1, refCount: false }),
-  );
+    const api$ = api(['-a-|', '-b-|']);
 
-  expect(cache$).toBeMarble('-a-|');
-  expect(cache$).toBeMarble('-a-|');
+    const cache$ = api$.pipe(
+      shareReplay({ bufferSize: 1, refCount: false }),
+    );
+
+    expect(cache$).toBeMarble('-a-|');
+    expect(cache$).toBeMarble('-a-|');
+  });
+
 });
