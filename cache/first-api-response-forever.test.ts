@@ -8,6 +8,7 @@ describe('cache the first value', () => {
 
     const api$ = api(['-a-|', '-b-|']);
 
+    // implementation
     const cache$ = api$.pipe(
       shareReplay({ bufferSize: 1, refCount: false }),
     );
